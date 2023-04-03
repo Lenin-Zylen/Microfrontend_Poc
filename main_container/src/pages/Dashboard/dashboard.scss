@@ -1,0 +1,32 @@
+.subscription {
+
+    .subscription-packs {
+        margin: 0.2rem;
+        padding: 0.25rem 0.5rem;
+        border-radius: 0.375rem;
+        display: inline-block;
+        background: #ECF2FF;
+        font-weight: 500;
+    }
+
+
+    .fa {
+        font-size: 0.85rem;
+        margin: 0.2rem;
+        padding: 0.25rem 0.5rem;
+
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    .fa-trash{
+        color: #E21818;
+    }
+
+    .fa-edit{
+        color: #539165;
+    }
+
+}

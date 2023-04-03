@@ -1,0 +1,22 @@
+trigger:
+  - main
+pool:
+  vmImage: ubuntu-latest
+steps:
+  - checkout: self
+    submodules: true
+  - task: CmdLine@2
+    inputs:
+      script: 'mv dev-staticwebapp.config.json staticwebapp.config.json'
+
+  - task: CopyFiles@2
+    inputs:
+      Contents: 'staticwebapp.config.json'
+      TargetFolder: 'build/'
+
+  - task: AzureStaticWebApp@0
+    inputs:
+      app_location: '/'
+      api_location: 'api'
+      output_location: '/build'
+      azure_static_web_apps_api_token: 44a322be20f0006eded906565aa364d5b59096c9e739dada02af3b1ed9ae2c4c2-ac8a63d1-935f-4e74-bbe0-f43a6a8b16af010182497

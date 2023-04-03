@@ -1,0 +1,57 @@
+@import '../../../assets/sass/main.scss';
+
+.heading-1 {
+  font-size: $font-size-32;
+  line-height: $line-height-38;
+  font-weight: $font-bold;
+}
+.heading-2 {
+  font-size: $font-size-18;
+  line-height: $line-height-22;
+  font-weight: $font-bold;
+}
+.heading-3 {
+  font-size: $font-size-16;
+  line-height: $line-height-18;
+  font-weight: $font-bold;
+}
+.heading-4 {
+  font-size: $font-size-14;
+  line-height: $line-height-18;
+  font-weight: $font-bold;
+}
+.heading-5 {
+  font-size: $font-size-12;
+  line-height: $line-height-16;
+  font-weight: $font-bold;
+}
+.sub-heading-1 {
+  font-size: $font-size-18;
+  line-height: $line-height-24;
+  font-weight: $font-semibold;
+}
+.sub-heading-2 {
+  font-size: $font-size-16;
+  line-height: $line-height-22;
+  font-weight: $font-semibold;
+}
+.sub-heading-3 {
+  font-size: $font-size-14;
+  line-height: $line-height-18;
+  font-weight: $font-semibold;
+}
+.sub-heading-4 {
+  font-size: $font-size-12;
+  line-height: $line-height-16;
+  font-weight: $font-semibold;
+}
+.sub-heading-5 {
+  font-size: $font-size-14;;
+  line-height: $line-height-16;
+  font-weight: $font-medium;
+}
+.sub-heading-6 {
+  font-size: $font-size-12;
+  line-height: $line-height-16;
+  font-weight: $font-medium;
+}

@@ -1,0 +1,108 @@
+@import '../../assets/sass/colors';
+
+.input-field {
+
+  .disabled {
+    &:hover {
+      cursor: not-allowed;
+    }
+  }
+
+  input,
+  textarea {
+    background: none;
+    color: black;
+    font-size: 0.75rem;
+    padding: 0rem 1rem;
+    display: block;
+    width: 100%;
+    border-radius: 0.5rem;
+    border: 2px solid rgba(0, 0, 0, 0.15);
+    line-height: 2.2rem;
+  }
+
+  input:focus,
+  textarea:focus {
+    outline: none;
+  }
+
+  input:focus~label,
+  input:valid~label,
+  textarea:focus~label,
+  textarea:valid~label {
+    top: -1rem;
+    font-size: 0.75rem;
+    color: #ABABAB;
+  }
+
+  label {
+    color: #939598;
+    font-size: 0.75rem;
+    position: absolute;
+    pointer-events: none;
+    left: 1rem;
+    top: 0.5rem;
+    transition: 300ms ease all;
+    background-color: #fff;
+    padding: 0.1rem 0.45rem;
+    font-weight: 500;
+  }
+
+  .bar {
+    position: relative;
+    display: block;
+  }
+
+  .bar:before {
+    content: "";
+    height: 2px;
+    width: 0;
+    bottom: 0px;
+    position: absolute;
+    background: #ABABAB;
+    transition: 300ms ease all;
+    left: 0%;
+  }
+
+  .group {
+    position: relative;
+  }
+
+  .text-body {
+    color: #939598 !important;
+    font-weight: 500;
+  }
+
+  .width100 {
+    width: 100%;
+  }
+
+
+  .group i {
+    position: absolute;
+    top: 1.33rem;
+    right: 1.66rem;
+  }
+
+
+
+  .login-box .group span {
+    font-size: 0.75rem;
+    margin: 0;
+    position: absolute;
+    bottom: -1.6rem;
+    color: #D1D1D1;
+  }
+
+  // .login-box p a {
+  //   color: #ABABAB;
+  // }
+
+  @media only screen and (max-width : 53.3rem) {
+    .group i {
+      right: 1.66rem;
+      top: 0;
+      line-height: 5.1rem;
+    }
+  }
+}

@@ -1,0 +1,73 @@
+.global-nav {
+    height: 100vh;
+    background: white;
+    width: 25%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 0.75rem 1.5rem rgba(18, 38, 63, 0.03);
+    padding: 1rem;
+
+
+    .launcher-menu {
+        font-size: 1.5rem;
+
+        &:hover {
+            background: whitesmoke;
+            cursor: pointer;
+        }
+    }
+
+    .main-apps {
+
+        h6 {
+            font-weight: 400;
+            font-size: 1.25rem;
+            margin-top: 1.5rem;
+        }
+    }
+
+    .product-list {
+        display: flex;
+
+        &-left,
+        &-right {
+            flex: 0 0 50%;
+            margin: 0 0.5rem;
+
+            a {
+                color: inherit;
+
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+        }
+
+        .product-item {
+            padding: 0.5rem 0;
+            display: flex;
+            align-items: center;
+            // justify-content: center;
+
+
+
+            .product-icon {
+                font-size: 1.5rem;
+            }
+
+            span {
+                margin-left: 0.5rem;
+                font-size: 0.75rem;
+                font-weight: 500;
+            }
+
+
+
+
+        }
+    }
+
+
+}

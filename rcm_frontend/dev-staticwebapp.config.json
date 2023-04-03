@@ -1,0 +1,9 @@
+{
+  "globalHeaders": {
+    "Access-Control-Allow-Origin": "https://web.zylensolutions.com",
+    "Access-Control-Allow-Methods": "POST, GET, OPTIONS"
+  },
+  "navigationFallback": {
+   "rewrite": "/index.html"
+  }
+}

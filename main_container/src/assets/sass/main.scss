@@ -1,0 +1,50 @@
+@import "./colors";
+@import "./icons";
+@import "./colorVariants";
+@import "./typography";
+// @import "../../../node_modules/bootstrap/scss/bootstrap";
+// @import "../../../node_modules/bootstrap/scss/functions";
+// @import "../../../node_modules/bootstrap/scss/variables";
+// @import "../../../node_modules/bootstrap/scss/variables";
+
+
+body {
+    font-size: $font-size-12;
+    font-weight: $font-medium;
+    line-height: $line-height-18;
+    background-color: #fafafa;
+}
+
+a { text-decoration: none;}
+
+.fw-400 {
+    font-weight: $font-normal;
+}
+
+.fw-500 {
+    font-weight: $font-medium;
+}
+
+.fw-600 {
+    font-weight: $font-semibold;
+}
+
+.fw-700 {
+    font-weight: $font-bold;
+}
+
+.fs-7 {
+    font-size: $font-size-14;
+}
+
+.fs-8 {
+    font-size: $font-size-12;
+}
+
+.fs-9 {
+    font-size: $font-size-10;
+}
+
+.fs-10 {
+    font-size: $font-size-8;
+}

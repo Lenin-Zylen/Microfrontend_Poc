@@ -1,0 +1,52 @@
+@import '../../assets/sass/main.scss';
+
+.header {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding:0.75rem 1rem;
+
+    .launcher-menu-container {
+        margin:0 0.5rem;
+    }
+
+    .launcher-menu {
+        font-size: 1.5rem;
+
+        &:hover {
+            background: whitesmoke;
+            cursor: pointer;
+        }
+    }
+
+    &-logo,
+    &-title {
+        // border: 1px solid grey;
+        height: 100%;
+        width: 100%;
+    }
+
+    .header-logo-text {
+        font-weight: 900;
+        font-size: 1.5rem;
+        line-height: 1.8125rem;
+        color: $primary;
+    }
+
+    .header-icon {
+        width: auto;
+        font-size: 1.4rem;
+        margin-left: 1rem;
+        display: block;
+        color: $primary;
+    }
+
+    @media (min-width:767px) {
+        .header-icon {
+            display: none;
+        }
+    }
+
+}

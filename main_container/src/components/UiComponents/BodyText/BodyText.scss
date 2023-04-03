@@ -1,0 +1,16 @@
+@import '../../../assets/sass/main.scss';
+.text-1 {
+  font-size: $font-size-12;
+  line-height: $line-height-16;
+  font-weight: $font-normal;
+}
+.text-2 {
+    font-size: $font-size-10;
+    line-height: $line-height-16;
+    font-weight: $font-normal;
+  }
+  .text-3 {
+    font-size: $font-size-8;
+    line-height: $line-height-14;
+    font-weight: $font-normal;
+  }

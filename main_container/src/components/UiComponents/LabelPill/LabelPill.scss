@@ -1,0 +1,40 @@
+@import '../../../assets/sass/main.scss';
+
+.label-pill {
+   // background-color: #EFF0F6;
+    color:#14142B;
+    padding: 4px 8px 4px 8px;
+    border-radius: 8px;
+    width:auto;
+    position: relative;
+    font-weight: 500;
+    align-self: start;
+}
+
+.pill-default {
+    background-color: #EFF0F6;
+}
+.pill-primary {
+    background-color: #8DE9FF;
+}
+.pill-success {
+    background-color: #CBFFAE;
+}
+.pill-danger {
+    background-color: #FFABE8;
+}
+.pill-warning {
+    background-color: #FFE6B0;
+}
+.pill-info {
+    background-color: #BFBEFC;
+}
+
+.pill-sm {
+    font-size: 13px;
+}
+.pill-md {
+    font-size: 14px; 
+}
+
+.label-pill i { cursor: pointer;}

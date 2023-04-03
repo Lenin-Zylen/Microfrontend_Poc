@@ -1,0 +1,332 @@
+@import '../../assets/sass/main.scss';
+
+// Vertical Sidebar - Default Light
+$sidebar-bg: #ffffff;
+$sidebar-menu-item-color: #545a6d;
+$sidebar-menu-sub-item-color: #545a6d;
+$sidebar-menu-item-icon-color: #7f8387;
+$sidebar-menu-item-hover-color: #ffffff;
+// $sidebar-menu-item-hover-color: #383c40;
+$sidebar-menu-item-active-color: #556ee6;
+$sidebar-width: 250px;
+$sidebar-collapsed-width: 70px;
+$sidebar-width-sm: 160px;
+$layout-collapsed-min-height: 1760px;
+
+// Vertical Sidebar - Dark
+$sidebar-dark-bg: #2a3042; //2c313a
+$sidebar-dark-menu-item-color: #a6b0cf;
+$sidebar-dark-menu-sub-item-color: #79829c;
+$sidebar-dark-menu-item-icon-color: #6a7187;
+$sidebar-dark-menu-item-hover-color: grey;
+$sidebar-dark-menu-item-active-color: grey;
+
+.menu-title {
+  padding: 0.625rem 1.5rem !important;
+  letter-spacing: .05em;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  color: $sidebar-bg;
+//  font-weight: $font-weight-semibold;
+  cursor: pointer;
+  text-align: center;
+  display: inline-block;
+}
+
+.layout-sidebar{
+    .menuText { 
+    position: absolute;
+    width:15rem; 
+    left:-15rem;
+    top:0;
+    background-color: $primary;
+    transition: 0.3s;
+    padding:0.625rem 1.5rem 0.625rem 6rem;
+    }
+}
+.expandSidebar {
+  .menuText {
+  position: absolute;
+  left:0rem;
+  width:auto;
+  padding:0.625rem 1.5rem 0.625rem 4.5rem;
+  transition: 0.3s;
+  top:0;
+  }
+}
+#sidebar-menu ul li a {
+  padding: 0!important;
+}
+#sidebar-menu ul li a i {
+  padding:0.625rem 1.5rem!important;
+  position: relative;
+  z-index: 1;
+  background-color: $primary;
+}
+#sidebar-menu ul li a:hover .menuText {
+  left:0rem;
+}
+
+.metismenu {
+  margin: 0;
+
+  li {
+    display: block;
+    width: 100%;
+  }
+
+  .mm-collapse {
+    display: none;
+
+    &:not(.mm-show) {
+      display: none;
+    }
+
+    &.mm-show {
+      display: block
+    }
+  }
+
+  .mm-collapsing {
+    position: relative;
+    height: 0;
+    overflow: hidden;
+    transition-timing-function: ease;
+    transition-duration: .35s;
+    transition-property: height, visibility;
+  }
+}
+
+#sidebar-menu {
+  height: 100%;
+  padding: 10px 0 30px 0;
+  background: $primary;
+
+  .mm-active {
+    >.has-arrow {
+      &:after {
+        transform: rotate(-180deg);
+      }
+    }
+  }
+
+  .has-arrow {
+    &:after {
+      content: "\F0140";
+      font-family: 'Material Design Icons';
+      display: block;
+      float: right;
+      transition: transform .2s;
+      font-size: 1rem;
+    }
+  }
+
+  ul {
+
+    li {
+      text-decoration: none;
+      color: white;
+
+      a {
+        display: block;
+        padding: .625rem 1.5rem;
+        color: white;
+        position: relative;
+        font-size: 13px;
+        transition: all .4s;
+
+        i {
+          display: inline-block;
+          min-width: 1.75rem;
+          padding-bottom: .125em;
+          font-size: 1.25rem;
+          line-height: 1.40625rem;
+          vertical-align: middle;
+          color: white;
+          transition: all .4s;
+        }
+
+        &:hover {
+          color: $sidebar-menu-item-hover-color;
+
+          i {
+            color: $sidebar-menu-item-hover-color;
+          }
+        }
+      }
+
+      .badge {
+        margin-top: 4px;
+      }
+
+      ul.sub-menu {
+        padding: 0;
+
+        li {
+
+          a {
+            padding: .4rem 1.5rem .4rem 3.5rem;
+            font-size: 13px;
+            color: $sidebar-menu-sub-item-color;
+
+            &:hover {
+              color: $sidebar-menu-item-hover-color;
+            }
+          }
+
+          ul.sub-menu {
+            padding: 0;
+
+            li {
+              a {
+                padding: .4rem 1.5rem .4rem 4.5rem;
+                font-size: 13px;
+
+
+              }
+            }
+          }
+        }
+      }
+    }
+
+  }
+}
+
+.vertical-collapsed {
+  .vertical-menu {
+    // Sidebar Menu
+    #sidebar-menu {
+
+      .menu-title,
+      .badge,
+      .collapse.in {
+        display: none !important;
+      }
+
+      .nav.collapse {
+        height: inherit !important;
+      }
+
+      .has-arrow {
+        &:after {
+          display: none;
+        }
+      }
+
+      >ul {
+        >li {
+          position: relative;
+          white-space: nowrap;
+
+          >a {
+            padding: 15px 20px;
+            min-height: 55px;
+            transition: none;
+
+            &:hover,
+            &:active,
+            &:focus {
+              color: $sidebar-menu-item-hover-color;
+            }
+
+            i {
+              font-size: 1.45rem;
+              margin-left: 4px;
+            }
+
+            span {
+              display: none;
+              padding-left: 25px;
+            }
+          }
+
+          &:hover {
+            >a {
+              position: relative;
+              width: calc(190px + #{$sidebar-collapsed-width});
+              color: $primary;
+              background-color: darken($sidebar-bg, 4%);
+              transition: none;
+
+              i {
+                color: $primary;
+              }
+
+              span {
+                display: inline;
+              }
+            }
+
+            >ul {
+              display: block;
+              left: $sidebar-collapsed-width;
+              position: absolute;
+              width: 190px;
+              height: auto !important;
+              box-shadow: 3px 5px 10px 0 rgba(54, 61, 71, 0.1);
+
+              ul {
+                box-shadow: 3px 5px 10px 0 rgba(54, 61, 71, 0.1);
+              }
+
+              a {
+                box-shadow: none;
+                padding: 8px 20px;
+                position: relative;
+                width: 190px;
+                z-index: 6;
+                color: $sidebar-menu-sub-item-color;
+
+                &:hover {
+                  color: $sidebar-menu-item-hover-color;
+                }
+              }
+            }
+          }
+        }
+
+        ul {
+          padding: 5px 0;
+          z-index: 9999;
+          display: none;
+          background-color: $sidebar-bg;
+
+          li {
+            &:hover {
+              >ul {
+                display: block;
+                left: 190px;
+                height: auto !important;
+                margin-top: -36px;
+                position: absolute;
+                width: 190px;
+              }
+            }
+
+            >a {
+              span.pull-right {
+                position: absolute;
+                right: 20px;
+                top: 12px;
+                transform: rotate(270deg);
+              }
+            }
+          }
+
+          li.active {
+            a {
+              color: $gray-100;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width:767px) {
+  .menu-title {display: none;}
+  .layout-sidebar{display:none}
+  .layout-sidebar.expandSidebar{display:block}
+}
