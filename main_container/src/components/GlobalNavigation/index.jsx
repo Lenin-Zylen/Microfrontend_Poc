@@ -31,7 +31,18 @@ function useOnClickOutside(ref, handler) {
 
 const GlobalNavigation = ({ setOpen }) => {
   const user = JSON.parse(localStorage.getItem("user"));
-  const subscription = ['RCM', "ERX"];
+  const subscription = [
+    "RCM",
+    "ERX",
+    "CIS",
+    "VOIP",
+    "SERVICE_DESK",
+    "CRM",
+    "EV",
+    "PACS",
+    "AI",
+    "BI"
+  ];
 
   const wrapperRef = useRef();
   useOnClickOutside(wrapperRef, () => setOpen(false));
@@ -85,7 +96,7 @@ const GlobalNavigation = ({ setOpen }) => {
                     className="product-icon"
                     style={{ color: "#EA5455" }}
                   />{" "}
-                  <span>CIS</span>
+                  <span>EBV</span>
                 </div>
               </a>
             )}
@@ -147,7 +158,7 @@ const GlobalNavigation = ({ setOpen }) => {
                     className="product-icon"
                     style={{ color: "#537FE7" }}
                   />{" "}
-                  <span>EV</span>
+                  <span>EBV</span>
                 </div>
               </a>
             )}
