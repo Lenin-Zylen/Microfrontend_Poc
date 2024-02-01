@@ -8,7 +8,6 @@ import Loader from "../../../components/Loader";
 import { toast } from "react-toastify";
 import { globalMenu } from "../../../constants/menu";
 import { isEmpty } from "lodash";
-import { ZyButton } from "zylen-ui-lib";
 
 const Login = () => {
   const navigate = useNavigate();
@@ -80,19 +79,20 @@ const Login = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setLoader(true);
-    if (userData.userName === "" || userData.password === "") {
-      setError("Please fill the mandatory filed");
+    navigate("/dashboard")
+    // setLoader(true);
+    // if (userData.userName === "" || userData.password === "") {
+    //   setError("Please fill the mandatory filed");
 
-      return;
-    } else {
-      const values = {
-        email: userData.userName,
-        password: userData.password,
-      };
+    //   return;
+    // } else {
+    //   const values = {
+    //     email: userData.userName,
+    //     password: userData.password,
+    //   };
 
-      loginUser(callback, values);
-    }
+    //   loginUser(callback, values);
+    // }
   };
 
   const callback = (data) => {
@@ -236,7 +236,6 @@ const Login = () => {
                         Sign In
                       </button>
                       <div className="m-1">
-                        <ZyButton title="Cancel" variant="zyprimary" />
                       </div>
                     </div>
                   </form>

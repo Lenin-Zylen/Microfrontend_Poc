@@ -31,7 +31,7 @@ function useOnClickOutside(ref, handler) {
 
 const GlobalNavigation = ({ setOpen }) => {
   const user = JSON.parse(localStorage.getItem("user"));
-  const subscription = get(user, "subscription", []);
+  const subscription = ['RCM', "ERX"];
 
   const wrapperRef = useRef();
   useOnClickOutside(wrapperRef, () => setOpen(false));
